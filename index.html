@@ -18,22 +18,22 @@
         <div class="nav_right">
             <ul>
                 <a href=""></a>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">certificate</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <section class="main_con">
-        <div class="Home">
+        <div class="Home" id="Home">
             <h1>Lavanya P - Portfolio</h1>
             <p>[ Software Developer ]</p>
             <a href=""><button class="Home_btn">Contact</button></a>
         </div>
-        <div class="about_details">
+        <div class="about_details" id="about">
             <div class="about">
                 <div class="about_left">
                     <h4 class="first_header">Innovative developer</h4>
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div class="project_details">
+        <div class="project_details" id="Projects">
             <div class="projects">
                 <h4 class="first_header">Innovative developer</h4>
                 <h2 class="Second_header">Crafting code with passion</h2>
@@ -103,24 +103,46 @@
                 </div>
             </div>
         </div>
-        <div class="skill_details">
+        <div class="skill_details" id="skills" >
             <div class="skills">
                 <h4 class="first_header">Innovative developer</h4>
                 <h2 class="Second_header">Creating solutions with code</h2>
-                <ul>
-                    <li>Python (Anaconda)</li>
-                    <li>Java (Version 8)</li>
-                    <li>C (Turbo C)</li>
-                    <li>Frontend Development (HTML, CSS, JS)</li>
-                </ul>
+                <div class="skill_logo">
+                    <img src="./img/Java.png" alt="">
+                    <img src="./img/python.png" alt="">
+                    <img src="./img/c-programming.png" alt="">
+                    <img src="./img/html.png" alt="">
+                    <img src="./img/css.png" alt="">
+                </div>
             </div>
         </div>
-        <div class="contact_details">
-            <div class="contact">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:lavanya102004@gmail.com">lavanya102004@gmail.com</a></p>
-                <p>Phone: +91 9514934479</p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/lavanya-p-59b9b0226" target="_blank">Lavanya P</a></p>
+        <div class="contact_form" id="Contact">
+            <div class="contact_details">
+                <div class="con_left">
+                    <h1>GET IN TOUCH</h1>
+                    <p>Let's start together</p>
+                    <div class="contact_logo">
+                        <a href="mailto:lavanya102004@gmail.com"><img src="./img/email.png" alt=""></a>
+                        <a href="https://www.linkedin.com/in/lavanya-p-59b9b0226" target="_blank"><img src="./img/linkedin.png" alt=""></a>
+                        <a href="https://github.com/CodeByLavanya"><img src="./img/github.png" alt=""></a>
+                        <a href="https://wa.me/+919514934479"><img src="./img/whatsapp.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <form action="#" method="post" class="form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+            
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+            
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
