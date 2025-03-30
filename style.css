@@ -8,7 +8,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 div{
@@ -36,6 +39,7 @@ a {
     display: flex;
     justify-content: space-around;
     top: 0;
+    z-index: 1000;
 }
 
 .nav_left {
@@ -144,6 +148,11 @@ a {
     color: #595959;
 }
 
+.about_img img{
+    border-radius: 75px;
+    border: 2px solid #82373ac9;
+}
+
 .project_details,.contact_form{
     background-color: #eef1ef;
     padding: 40px 143px;
@@ -243,17 +252,23 @@ button:hover {
 
 .contact_details{
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 50px;
+    grid-template-columns:  400px 500px;
+    gap: 122px;
 }
 
 .contact{
     max-width: 500px;
 }
 
+.contact_logo{
+    display: flex;
+    margin: 30px 0px;
+    gap: 28px;
+}
+
 .contact_logo img{
-    width: 50px; 
-    height: 50px;
+    width: 75px; 
+    height: 75px;
 }
 
 .con_left h1{

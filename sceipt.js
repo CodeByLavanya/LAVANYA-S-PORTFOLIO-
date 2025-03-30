@@ -6,7 +6,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
         const targetSection = document.getElementById(targetId);
 
         window.scrollTo({
-            top: targetSection.offsetTop - 50, // Adjust for navbar height
+            top: targetSection.offsetTop - 50, 
             behavior: 'smooth'
         });
     });
