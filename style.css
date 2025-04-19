@@ -31,7 +31,8 @@ a {
 }
 
 .nav_bar {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     background-color: hsl(0, 0%, 100%);
     color: rgb(0, 0, 0);
     align-items: center;
@@ -71,13 +72,37 @@ a {
     padding: 0px 30px;
 }
 
-.nav_right a{
+.nav_right ul li a{
     text-decoration: none;
     font-size: 14px;
     color: #595959;    
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+
+.nav_right ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #823739; /* Blue color underline */
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav_right ul li a:hover::after,
+.nav_right ul li a.active::after {
+    width: 100%;
+}
+
+.nav1:hover,
+.nav1.active {
+    color: #823739;
 }
 
 .main_con{
@@ -87,7 +112,7 @@ a {
 
 .Home{
     color: white;
-    padding: 100px 250px 150px 150px  !important;
+    padding: 150px 250px 150px 150px  !important;
 }
 
 .Home h1{
@@ -116,13 +141,13 @@ a {
 
 .about_details, .skill_details {
     background-color: #ffffff;
-    padding: 40px 143px;
+    padding: 80px 143px;
 }   
 
 .about{
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+    padding: 0px 40px;
 }
 
 .first_header{
@@ -155,7 +180,7 @@ a {
 
 .project_details,.contact_form{
     background-color: #eef1ef;
-    padding: 40px 143px;
+    padding: 80px 143px;
 }
 
 .project{
@@ -276,3 +301,9 @@ button:hover {
     font-size: xx-large;
     margin: 31px 0px;
 }
+
+.con_btn{
+    width: 518px;
+}
+
+
