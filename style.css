@@ -185,11 +185,13 @@ a {
 
 .project{
     background-color: #ffffff;
+    width: 500px;
+    height: 480px;
 }
 
 .pro_col{
     display:grid;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: auto auto auto;
     gap: 30px;
 }
 
@@ -216,19 +218,21 @@ a {
     padding: 12px;
 }
 
-.lowerpart h4{
+.lowerpart a{
     color: black;
+    font-weight: 600;
 }
 
-.lowerpart a{
-    max-width: 300px;
-    color: #5a5e61;
+.lowerpart p{
+    text-align: justify;
 }
 
 .skill_logo{
     padding-top: 20px;
     display: flex;
     gap: 20px;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
 }
 
 .skill_logo img{
@@ -305,5 +309,3 @@ button:hover {
 .con_btn{
     width: 518px;
 }
-
-
