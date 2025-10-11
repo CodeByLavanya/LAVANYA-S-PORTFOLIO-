@@ -79,13 +79,29 @@ const handleHover = function (e) {
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 
+// Get all sections and nav links
+const sections = document.querySelectorAll('div[id]');
+const navLinks = document.querySelectorAll('.nav1');
+console.log(sections)
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // remove active from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+        
+        // add active to the visible section's link
+        const id = entry.target.getAttribute('id');
+        document.querySelector(`.nav1[href="#${id}"]`).classList.add('active');
+      }
+    });
+  },
+  {
+    root: null,
+    threshold: 0.4, // means 40% of section visible triggers it
+  }
+);
 
-
-const slider = document.querySelector('.pro_col');
-document.querySelector('.slider__btn--right').addEventListener('click', () => {
-  slider.scrollBy({ left: 300, behavior: 'smooth' });
-});
-document.querySelector('.slider__btn--left').addEventListener('click', () => {
-  slider.scrollBy({ left: -300, behavior: 'smooth' });
-});
+// observe each section
+sections.forEach(section => observer.observe(section));

@@ -75,7 +75,7 @@ a {
 .nav_right ul li a{
     text-decoration: none;
     font-size: 14px;
-    color: #595959;    
+    color: #b49c9c;    
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: 1px;
@@ -102,7 +102,7 @@ a {
 
 .nav1:hover,
 .nav1.active {
-    color: #823739;
+    color: #5f2325;
 }
 
 .main_con{
